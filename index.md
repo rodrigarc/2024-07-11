@@ -3,19 +3,19 @@ layout: workshop      # DON'T CHANGE THIS.
 # More detailed instructions (including how to fill these variables for an
 # online workshop) are available at
 # https://carpentries.github.io/workshop-template/customization/index.html
-venue: "FIXME"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
-address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
-country: "FIXME"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
-language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
-latitude: "45"        # decimal latitude of workshop venue (use https://www.latlong.net/)
-longitude: "-1"       # decimal longitude of the workshop venue (use https://www.latlong.net)
-humandate: "FIXME"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "FIXME"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
-startdate: FIXME      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: FIXME        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["instructor one", "instructor two"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["helper one", "helper two"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["first@example.org","second@example.org"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+venue: "Karolinska Institutet, Stockholm, Sweden;"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
+address: "Solnavägen 30, 171 64 Solna"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
+country: "se"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
+language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
+latitude: "59.329323"        # decimal latitude of workshop venue (use https://www.latlong.net/)
+longitude: "18.068581"       # decimal longitude of the workshop venue (use https://www.latlong.net)
+humandate: "July 11-12, 2024"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humantime: "9:00 - 16:00 (CET)"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
+startdate: 2024-07-11      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2023-07-12        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["Rodrigo Arcoverde Cerveira da Silva"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["Gustav Joas"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+email: ["rodrigo.arcoverde@ki.se","rodrigo.arcoverdi@gmail.com", "gustav.joas@ki.se"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes:  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
@@ -32,40 +32,14 @@ And run 'make workshop-check' *before* committing to make sure that changes are 
 {% endcomment %}
 
 
-
-{% comment %}
-8< ============= For a workshop delete from here =============
-For a workshop please delete the following block until the next dashed-line
-{% endcomment %}
-
-
-<div class="alert alert-danger">
-This is the workshop template. Delete these lines and use it to
-<a href="https://carpentries.github.io/workshop-template/customization/index.html">customize</a>
-your own website. If you are running a self-organized workshop or have not put
-in a workshop request yet, please also fill in
-<a href="{{site.amy_site}}/forms/self-organised/">this workshop request form</a>
-to let us know about your workshop and our administrator may contact you if we
-need any extra information.
-If this is a pilot workshop for a new lesson,
-set the `pilot` field to `true` in `_config.yml`.
-For workshops teaching a lesson in The Carpentries Incubator,
-remember to uncomment the `incubator_lesson_site`, `incubator_pre_survey`, and `incubator_post_survey`
-fields in `_config.yml`
-</div>
-
-{% comment %}
-8< ============================= until here ==================
-{% endcomment %}
-
 {% comment %}
 Check DC curriculum
 {% endcomment %}
 
 {% if site.carpentry == "dc" %}
-{% unless site.curriculum == "dc-astronomy" or site.curriculum == "dc-ecology" or site.curriculum == "dc-genomics" or site.curriculum == "dc-geospatial" or site.curriculum == "dc-image" or site.curriculum == "dc-socsci" %}
+{% unless site.curriculum == "dc-astronomy" or site.curriculum == "dc-ecology" or site.curriculum == "dc-genomics" or site.curriculum == "dc-socsci" or site.curriculum == "dc-geospatial" %}
 <div class="alert alert-warning">
-It looks like you are setting up a website for a Data Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>dc-image</code>, <code>dc-astronomy</code>, <code>dc-ecology</code>, <code>dc-genomics</code>, <code>dc-socsci</code>, or <code>dc-geospatial</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
+It looks like you are setting up a website for a Data Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>dc-astronomy</code>, <code>dc-ecology</code>, <code>dc-genomics</code>, <code>dc-socsci</code>, or <code>dc-geospatial</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
 </div>
 {% endunless %}
 {% endif %}
@@ -111,29 +85,18 @@ INTRODUCTION
 Edit the general explanatory paragraph below if you want to change
 the pitch.
 {% endcomment %}
-
-<p>
-<strong><a href="https://carpentries.org">The Carpentries</a></strong> project comprises the <a
-href="{{site.swc_site}}">Software Carpentry</a>, <a href="{{site.dc_site}}">Data Carpentry</a>, and
-<a href="{{site.lc_site}}">Library Carpentry</a> communities of Instructors, Trainers, Maintainers,
-helpers, and supporters who share a mission to teach foundational computational and data science
-skills to researchers.
-<p align="center">
-  <em>
-  <strong>Want to learn more and stay engaged with The Carpentries?</strong> Carpentries Clippings is The Carpentries' biweekly newsletter, where we share community news, community job postings, and more.
-Sign up to receive future editions and read our full archive: <a href="https://carpentries.org/newsletter/">https://carpentries.org/newsletter/</a>
-  </em>
-</p>
 {% if site.carpentry == "swc" %}
 {% include swc/intro.html %}
 {% elsif site.carpentry == "dc" %}
 {% include dc/intro.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/intro.html %}
+{% elsif site.carpentry == "bioc" %}		
+{% include bioc/intro.html %}
 {% endif %}
 
 {% if site.pilot %}
-This is a pilot workshop, testing out a lesson that is still under development. The lesson authors would appreciate any feedback you can give them about the lesson content and suggestions for how it could be further improved.
+This is a beta workshop, testing out a lesson that is still under development. The lesson authors would appreciate any feedback you can give them about the lesson content and suggestions for how it could be further improved.
 {% endif %}
 
 {% comment %}
@@ -148,6 +111,8 @@ workshop is only open to people from a particular institution.
 {% include dc/who.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/who.html %}
+{% elsif site.carpentry == "bioc" %}		
+{% include bioc/who.html %}
 {% endif %}
 
 {% comment %}
@@ -197,7 +162,7 @@ This block displays the date and links to Google Calendar.
 {% if page.humandate %}
 <p id="when">
   <strong>When:</strong>
-  {{page.humandate}}; {{page.humantime}}
+  {{page.humandate}}.
   {% include workshop_calendar.html %}
 </p>
 {% endif %}
@@ -227,32 +192,28 @@ special instructions.
 {% endcomment %}
 <p id="accessibility">
   <strong>Accessibility:</strong>
-  We are committed to making this workshop
-  accessible to everybody. 
 {% if online == "false" %}
-  The workshop organizers have checked that:
+  We are committed to making this workshop
+  accessible to everybody.  For workshops at a physical location, the workshop organizers have checked that:
+</p>
+<ul>
+  <li>The room is wheelchair / scooter accessible.</li>
+  <li>Accessible restrooms are available.</li>
+</ul>
 <p>
-  <ul>
-    <li>The room is wheelchair / scooter accessible.</li>
-    <li>Accessible restrooms are available.</li>
-  </ul>
+  Materials will be provided in advance of the workshop and
+  large-print handouts are available if needed by notifying the
+  organizers in advance.  If we can help making learning easier for
+  you (e.g. sign-language interpreters, lactation facilities) please
+  get in touch (using contact details below) and we will
+  attempt to provide them.
+</p>
+{% else %}
+  We are dedicated to providing a positive and accessible learning environment for all. Please
+  notify the instructors in advance of the workshop if you require any accommodations or if there is
+  anything we can do to make this workshop more accessible to you.
+</p>
 {% endif %}
-</p>
-<p>We are dedicated to providing a positive and accessible learning environment for all. 
-  We do not require participants to provide documentation of disabilities or disclose any unnecessary personal information. 
-  However, we do want to help create an inclusive, accessible experience for all participants. 
-  We encourage you to share any information that would be helpful to make your Carpentries experience accessible.
-  To request an accommodation for this workshop, please fill out the 
-  <a href="https://carpentries.typeform.com/to/B2OSYaD0">accommodation request form</a>.
-  If you have questions or need assistance with the accommodation form please <a href="mailto:team@carpentries.org">email us</a>.
-</p>
-<p>
-  <a href="https://glosario.carpentries.org/">Glosario</a> is a multilingual glossary 
-  for computing and data science terms. The glossary helps 
-  learners attend workshops and use our lessons to make sense of computational and programming jargon written in English by offering it 
-  in their native language. Translating data science terms also provides a teaching tool for Carpentries Instructors to reduce barriers 
-  for their learners.
-</p>
 
 {% comment %}
 CONTACT EMAIL ADDRESS
@@ -285,6 +246,23 @@ Display the contact email address set in the configuration file.
   refer to <a href="https://carpentries.org/workshop_faq/#what-are-the-roles-of-everyone-participating-in-a-workshop">our Workshop FAQ</a>.
 </p>
 
+<p id="cost">
+  <strong>Cost:</strong>
+  $75 USD
+</p>
+
+<p id="application">
+  <strong>Application:</strong>
+  You can apply to attend workshop by filling out the form in the "Apply for a place" button below. Applications will be reviewed by the organisers until places are filled, and all applicants will be informed of the status of their application (successful, waiting list, unsuccessful).  
+</p>
+
+<p class="text-center">	
+  <a href="https://app.smartsheet.com/b/form/3482d8ac5665404f83cf098e6714f87f">
+    <button type="button" class="btn btn-success">Apply for a place</button>
+  </a>
+</p>
+<hr/>
+
 {% comment %}
 WHO CAN ATTEND?
 
@@ -313,12 +291,12 @@ CODE OF CONDUCT
 {% endcomment %}
 <h2 id="code-of-conduct">Code of Conduct</h2>
 
-<p>
-Everyone who participates in Carpentries activities is required to conform to the <a href="https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html">Code of Conduct</a>. This document also outlines how to report an incident if needed.
+<p>	
+Everyone who participates in Bioconductor activities is required to conform to the <a href="https://bioconductor.github.io/bioc_coc_multilingual/">Code of Conduct</a>. This document also outlines how to report an incident if needed.	
 </p>
 
-<p class="text-center">
-  <a href="https://goo.gl/forms/KoUfO53Za3apOuOK2">
+<p class="text-center">	
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeG5XsKikC34LhhkUrb95z_ESApBIaed9LOr7rPkho6VgqYCA/viewform">
     <button type="button" class="btn btn-info">Report a Code of Conduct Incident</button>
   </a>
 </p>
@@ -366,8 +344,12 @@ in `_config.yml` or, if this workshop is teaching a lesson in the Incubator,
 change the value of `carpentry` to `incubator`.
 </div>
 {% else %}
+{% comment %}
 <p><a href="{{ site.pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
 <p><a href="{{ site.post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
+{% endcomment %}
+<p>Pre-workshop Survey</p>
+<p>Post-workshop Survey</p>
 {% endif %}
 
 <hr/>
@@ -403,6 +385,8 @@ of code below the Schedule `<h2>` header below with
 {% include dc/schedule.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/schedule.html %}
+{% elsif site.carpentry == "bioc" %}		
+{% include bioc/schedule.html %}
 {% elsif site.carpentry == "incubator" %}
 This workshop is teaching a lesson in [The Carpentries Incubator](https://carpentries-incubator.org/).
 Please check [the lesson homepage]({{ site.incubator_lesson_site }}) for a list of lesson sections and estimated timings.
@@ -443,6 +427,8 @@ please preview your site before committing, and make sure to run
   Data Carpentry
   {% elsif site.carpentry == "lc" %}
   Library Carpentry
+  {% elsif site.carpentry == "bioc" %}		
+  Bioconductor workshop
   {% endif %}
   workshop,
   you will need access to software as described below.
@@ -479,6 +465,8 @@ during the workshop.
 {% include dc/setup.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/setup.html %}
+{% elsif site.carpentry == "bioc" %}		
+{% include bioc/setup.html %}
 {% elsif site.carpentry == "incubator" %}
 Please check the "Setup" page of
 [the lesson site]({{ site.incubator_lesson_site }}) for instructions to follow
