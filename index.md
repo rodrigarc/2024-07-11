@@ -246,16 +246,6 @@ Display the contact email address set in the configuration file.
   refer to <a href="https://carpentries.org/workshop_faq/#what-are-the-roles-of-everyone-participating-in-a-workshop">our Workshop FAQ</a>.
 </p>
 
-<p id="cost">
-  <strong>Cost:</strong>
-  $75 USD
-</p>
-
-<p id="application">
-  <strong>Application:</strong>
-  You can apply to attend workshop by filling out the form in the "Apply for a place" button below. Applications will be reviewed by the organisers until places are filled, and all applicants will be informed of the status of their application (successful, waiting list, unsuccessful).  
-</p>
-
 <p class="text-center">	
   <a href="https://app.smartsheet.com/b/form/3482d8ac5665404f83cf098e6714f87f">
     <button type="button" class="btn btn-success">Apply for a place</button>
