@@ -446,7 +446,7 @@ during the workshop.
 {% include dc/setup.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/setup.html %}
-{% elsif site.carpentry == "incubator" %}
+{% elsif site.carpentry == "bioc" %}
 Please check the "Summary and Setup" page by
 [**clicking HERE to be directed to the lesson site**]({{ site.incubator_lesson_site }}) for instructions on how to obtain the software and data needed to follow the lesson.
 If you want to download the `.Rmd` files that contain both the scripts in "R chunks" and the texts formatted in markdown, access [**this folder on Google Drive**](https://drive.google.com/drive/folders/1tw413Nu-dowVR_oWmwxJprBpiS0LNTOD?usp=sharing) and download both the `.Rmd`, the slides, and the data used for analysis.
