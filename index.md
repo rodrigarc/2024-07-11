@@ -384,16 +384,15 @@ how one of these schedule tables is constructed.
 {% endcomment %}
 
 {% if site.pilot %}
-The lesson taught in this workshop is being piloted and a precise schedule is yet to be established. The workshop will include regular breaks. Please [contact the workshop organisers](#contact) if you would like more information about the planned schedule.
+The lesson taught in this workshop is being piloted and a precise schedule is yet to be established. The workshop will include regular breaks. Please [contact the workshop organizers](#contact) if you would like more information about the planned schedule.
 {% endif %}
 
 <hr/>
 
-
 {% comment %}
 SETUP
 
-Delete irrelevant sections from the setup instructions.  Each
+Delete irrelevant sections from the setup instructions. Each
 section is inside a 'div' without any classes to make the beginning
 and end easier to find.
 
@@ -405,31 +404,28 @@ please preview your site before committing, and make sure to run
 <h2 id="setup">Setup</h2>
 
 <p>
-  To participate in a
+  To participate in this
   {% if site.carpentry == "swc" %}
   Software Carpentry
   {% elsif site.carpentry == "dc" %}
   Data Carpentry
   {% elsif site.carpentry == "lc" %}
   Library Carpentry
-  {% elsif site.carpentry == "bioc" %}		
-  Bioconductor workshop
   {% endif %}
   workshop,
-  you will need access to software as described below.
-  In addition, you will need an up-to-date web browser.
+  you will need access to the software described below.
+  Additionally, you will need an up-to-date browser.
 </p>
 <p>
-  We maintain a list of common issues that occur during installation as a reference for instructors
-  that may be useful on the
-  <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
+  We maintain a list of common installation problems as a reference for instructors, which can be useful on the
+  <a href="{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
 </p>
 
 {% comment %}
 For online workshops, the section below provides:
 - installation instructions for the Zoom client
 - recommendations for setting up Learners' workspace so they can follow along
-  the instructions and the videoconferencing
+  with the instructions and the videoconferencing
 
 If you do not use Zoom for your online workshop, edit the file
 `_includes/install_instructions/videoconferencing.html`
@@ -450,10 +446,8 @@ during the workshop.
 {% include dc/setup.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/setup.html %}
-{% elsif site.carpentry == "bioc" %}		
-{% include bioc/setup.html %}
 {% elsif site.carpentry == "incubator" %}
-Please check the "Setup" page of
-[the lesson site]({{ site.incubator_lesson_site }}) for instructions to follow
-to obtain the software and data you will need to follow the lesson.
+Please check the "Summary and Setup" page by
+[**clicking HERE to be directed to the lesson site**]({{ site.incubator_lesson_site }}) for instructions on how to obtain the software and data needed to follow the lesson.
+If you want to download the `.Rmd` files that contain both the scripts in "R chunks" and the texts formatted in markdown, access [**this folder on Google Drive**](https://drive.google.com/drive/folders/1tw413Nu-dowVR_oWmwxJprBpiS0LNTOD?usp=sharing) and download both the `.Rmd`, the slides, and the data used for analysis.
 {% endif %}
