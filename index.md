@@ -246,11 +246,6 @@ Display the contact email address set in the configuration file.
   refer to <a href="https://carpentries.org/workshop_faq/#what-are-the-roles-of-everyone-participating-in-a-workshop">our Workshop FAQ</a>.
 </p>
 
-<p class="text-center">	
-  <a href="https://app.smartsheet.com/b/form/3482d8ac5665404f83cf098e6714f87f">
-    <button type="button" class="btn btn-success">Apply for a place</button>
-  </a>
-</p>
 <hr/>
 
 {% comment %}
