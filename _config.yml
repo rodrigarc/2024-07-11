@@ -63,7 +63,7 @@ title: "Bioconductor RNA-Seq data analysis"
 incubator_lesson_site: "https://carpentries-incubator.github.io/bioc-rnaseq/"
 #
 # For an Incubator workshop, uncomment the line below and add the URL of your pre-workshop survey
-incubator_pre_survey: "https://forms.gle/1MvLRvwJ55iEBsWG6"
+incubator_pre_survey: "https://forms.gle/6TVRQySrzzFGWsGN6"
 #
 # For an Incubator workshop, uncomment the line below and add the URL of your post-workshop survey
 incubator_post_survey: "https://forms.gle/raQvjZ77DR4MJJEv6"
